@@ -1,4 +1,4 @@
-package sync_client
+package sync
 
 import (
 	"context"
