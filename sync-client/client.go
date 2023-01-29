@@ -46,7 +46,7 @@ func (c *cl) Send(data []service.Item, returnResidual bool) (int, error) {
 
 	skip := 0
 	itemsAmount := len(data)
-	batchAmount := int(math.Ceil(float64(itemsAmount / c.batchSize)))
+	batchAmount := int(math.Ceil(float64(itemsAmount) / float64(c.batchSize)))
 
 	for i := 0; i < batchAmount; i++ {
 		lowerBound := skip
